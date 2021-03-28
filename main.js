@@ -98,3 +98,38 @@ function my_keydown(e) {
     }
 }
 
+function up() {
+    if (player_y>=30){
+        player_y = player_y-30;
+        console.log("When Up arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function left() {
+    if (player_x>=30){
+        player_x = player_x-30;
+        console.log("When Left arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function down() {
+    if (player_y<=450){
+        player_y = player_y+30;
+        console.log("When Down arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function right() {
+    if (player_x<=850){
+        player_x = player_x+30;
+        console.log("When Right arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
